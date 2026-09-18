@@ -4,10 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tidewater Studio and Design | Coming Soon</title>
-    <meta name="description" content="Tidewater Studio and Design is currently under construction. Please check back soon.">
     
     <style>
-        /* Reset defaults to ensure full screen coverage */
         * {
             margin: 0;
             padding: 0;
@@ -17,63 +15,73 @@
         body, html {
             height: 100%;
             width: 100%;
-            overflow: hidden; /* Prevents scrollbars */
-            background-color: #f4ebd9; /* Fallback color matching the image background */
+            overflow: hidden; 
+            background-color: #2c4a5a; 
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            color: #ffffff;
         }
 
-        /* Container for the full screen image */
         .hero-image {
-            /* The image path. Ensure the uploaded image is named exactly this. */
-            background-image: url('tidewater-bg.jpg');
-            
-            /* Full height */
             height: 100%; 
-
-            /* Center and scale the image nicely */
+            width: 100%;
+            
+            /* ================================================== */
+            /* 👇 CHANGE THE NAME INSIDE THE QUOTES BELOW 👇 */
+            /* ================================================== */
+            background-image: url('PUT_YOUR_EXACT_IMAGE_NAME_HERE.jpg');
+            
             background-position: center center;
             background-repeat: no-repeat;
             background-size: cover;
             
-            /* Flexbox to center content */
             display: flex;
             justify-content: center;
             align-items: center;
+            text-align: center;
+            
+            background-color: rgba(0, 0, 0, 0.2); 
+            background-blend-mode: overlay;
         }
 
-        /* 
-           Accessibility: Hidden text for screen readers and search engines 
-           since the text is baked into the image.
-        */
-        .sr-only {
-            position: absolute;
-            width: 1px;
-            height: 1px;
-            padding: 0;
-            margin: -1px;
-            overflow: hidden;
-            clip: rect(0, 0, 0, 0);
-            white-space: nowrap;
-            border-width: 0;
+        .placeholder-text {
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.6); 
+            border-radius: 8px;
+            max-width: 90%;
         }
 
-        /* Mobile responsiveness adjustment */
-        @media (max-width: 768px) {
-            .hero-image {
-                /* On very small screens, shift the image slightly so the main logo remains visible */
-                background-position: 35% center; 
-            }
+        .placeholder-text h1 {
+            font-size: 2rem;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        .placeholder-text p {
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+        }
+
+        .placeholder-text .error-msg {
+            color: #ff9999;
+            font-size: 0.9rem;
+            margin-top: 15px;
+            font-weight: bold;
         }
     </style>
 </head>
 <body>
 
     <div class="hero-image">
-        <!-- Hidden text for SEO and Accessibility -->
-        <div class="sr-only">
-            <h1>Tidewater Studio and Design</h1>
-            <p>Under Construction. Please come back soon.</p>
-            <p>Rooted here. Inspired everywhere.</p>
-            <p>Coastal by Nature.</p>
+        <div class="placeholder-text">
+            <h1>Tidewater Studio</h1>
+            <p>Under Construction</p>
+            <p>Please come back soon.</p>
+            
+            <p class="error-msg">
+                ⚠️ Image not found.<br>
+                Please check that the file name in the code matches your exact image file name.
+            </p>
         </div>
     </div>
 
