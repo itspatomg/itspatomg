@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tidewater Studio and Design | Coming Soon</title>
+    <meta name="description" content="Tidewater Studio and Design is currently under construction. Please check back soon.">
+    
+    <style>
+        /* Reset defaults to ensure full screen coverage */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            height: 100%;
+            width: 100%;
+            overflow: hidden; /* Prevents scrollbars */
+            background-color: #f4ebd9; /* Fallback color matching the image background */
+        }
+
+        /* Container for the full screen image */
+        .hero-image {
+            /* The image path. Ensure the uploaded image is named exactly this. */
+            background-image: url('tidewater-bg.jpg');
+            
+            /* Full height */
+            height: 100%; 
+
+            /* Center and scale the image nicely */
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            
+            /* Flexbox to center content */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* 
+           Accessibility: Hidden text for screen readers and search engines 
+           since the text is baked into the image.
+        */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border-width: 0;
+        }
+
+        /* Mobile responsiveness adjustment */
+        @media (max-width: 768px) {
+            .hero-image {
+                /* On very small screens, shift the image slightly so the main logo remains visible */
+                background-position: 35% center; 
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="hero-image">
+        <!-- Hidden text for SEO and Accessibility -->
+        <div class="sr-only">
+            <h1>Tidewater Studio and Design</h1>
+            <p>Under Construction. Please come back soon.</p>
+            <p>Rooted here. Inspired everywhere.</p>
+            <p>Coastal by Nature.</p>
+        </div>
+    </div>
+
+</body>
+</html>
