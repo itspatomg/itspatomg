@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tidewater Studio and Design | Coming Soon</title>
+    <title>Tidewater Studio and Design</title>
     
     <style>
-        /* 1. Basic Reset & Fallback Colors */
+        /* 1. Basic Reset */
         * {
             margin: 0;
             padding: 0;
@@ -14,90 +14,44 @@
         }
 
         body {
-            /* Fallback color so you never see a blank white page */
+            /* Fallback color matches the water/edges of your map image */
             background-color: #2c4a5a; 
-            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-            color: #ffffff;
             
-            /* This centers the image horizontally */
+            /* Centers the image horizontally on the screen */
             display: flex;
             justify-content: center;
             
-            /* Allows the page to scroll vertically if the image is taller than the screen */
+            /* Allows vertical scrolling on smaller screens */
             overflow-x: hidden;
             overflow-y: auto;
         }
 
         /* 2. The Image Container */
         .hero-image {
-            /* --- THIS IS WHERE YOU SET YOUR IMAGE --- */
-            /* Make sure your image is in the same folder and named exactly this */
+            /* --- YOUR IMAGE --- */
+            /* Ensure this matches the exact file name in your repository */
             background-image: url('tidewater-bg.jpg');
             
-            /* Ensure the image scales proportionally */
+            /* Keep the image at the top center */
             background-position: top center;
             background-repeat: no-repeat;
+            
+            /* 'contain' ensures the whole image is always visible without cropping */
             background-size: contain;
             
-            /* This makes the container match the image's aspect ratio perfectly.
-               Your provided image is roughly a 16:9 widescreen ratio (1920x1080). */
+            /* Matches the shape of your image so no weird gaps appear */
             width: 100%;
             aspect-ratio: 16 / 9;
             
-            /* Ensures the container doesn't get too small on massive screens */
-            max-width: 1920px; 
-            
-            /* Flexbox to center the placeholder text */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-        }
-
-        /* 3. Visible Placeholder Text (Only shows if image fails or is loading) */
-        .placeholder-text {
-            padding: 20px;
-            background-color: rgba(0, 0, 0, 0.6); /* Dark box so text is readable */
-            border-radius: 8px;
-            max-width: 90%;
-        }
-
-        .placeholder-text h1 {
-            font-size: 2rem;
-            letter-spacing: 2px;
-            margin-bottom: 10px;
-            text-transform: uppercase;
-        }
-
-        .placeholder-text p {
-            font-size: 1.1rem;
-            margin-bottom: 5px;
-        }
-
-        .placeholder-text .error-msg {
-            color: #ff9999;
-            font-size: 0.9rem;
-            margin-top: 15px;
-            font-weight: bold;
+            /* Prevents the image from getting pixelated on ultra-wide monitors */
+            max-width: 2560px; 
         }
     </style>
 </head>
 <body>
 
-    <div class="hero-image">
-        <!-- This text will be hidden behind the image if the image loads properly. -->
-        <!-- If the image is missing, you will see this box with instructions. -->
-        <div class="placeholder-text">
-            <h1>Tidewater Studio</h1>
-            <p>Under Construction</p>
-            <p>Please come back soon.</p>
-            
-            <p class="error-msg">
-                ⚠️ Image not found.<br>
-                Please upload a file named <strong>tidewater-bg.jpg</strong> to the same folder as this HTML file.
-            </p>
-        </div>
-    </div>
+    <!-- The div where the background image loads -->
+    <div class="hero-image" role="img" aria-label="Tidewater Studio and Design map of coastal Virginia"></div>
 
 </body>
 </html>
